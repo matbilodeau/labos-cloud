@@ -39,7 +39,7 @@ La commande `sudo docker exec` est exactement pour ça, lancer une commande dans
 Exécutez un shell "sh" dans le container Debian avec `sudo docker exec -ti <container debian> /bin/sh` puis inspectez les processus en cours d'exécution dans le container. Vous verrez seulement le shell _bash_, votre shell _sh_ et la commande _ps -ef_.  Sortez avec `exit`.
 
 ### Arrêter un container
-Un container s'arrête par défaut quand il n'y a plus de processus en cours d'exécution. Pour arrêter un container avec des processus toujours en cours d'exécution nous pouvons utiliser "Ctrl+c" à partir du terminal 1 ou, sur le terminal 2, `exit` pour sortir du container Debian puis `sudo docker stop <nom ou id container httpd>` ou encore `sudo docker kill <nom ou id container httpd>`. `stop` tente de faire un _graceful shutdown_, un arrêt "poli" tandis que `kill` impose l'arrêt.
+Un container s'arrête par défaut quand il n'y a plus de processus en cours d'exécution. Pour arrêter un container avec des processus toujours en cours d'exécution nous pouvons utiliser "Ctrl+c" à partir du terminal 1 ou, sur le terminal 2, `exit` pour sortir du container Debian puis `sudo docker stop <nom ou id container httpd>` ou encore `sudo docker kill <nom ou id container httpd>`. `stop` tente de faire un _graceful shutdown_, un arrêt "poli" tandis que `kill` impose l'arrêt. Enlevez tous les container arrêtés.
 
 ### Revenir à l'[exercice 2][2]
 

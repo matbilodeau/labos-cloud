@@ -1,12 +1,10 @@
 # Laboratoire sur Docker
 
-## Exercice 3
- de créer une image à partir d'un fichier Dockerfile,  de monter un répertoire local dans un container et de valider l'authenticité des images.
+## Éxercice 3
+Après cet éxercice, vous pourrez créer une image à partir d'un fichier Dockerfile.
 
 ### Système de fichiers partie 2
-Dans l'[exercice 1][0], nous avons appris qu'un changement dans le container existe seulement dans le container. Exécutez un container _Debian_ en mode interactif avec un pseudo-terminal. Modifiez le contenu de "/home" comme vu précédemment puis sortez du container. Examinez les containers à l'arrêt. Parmi les différentes commandes listées par `sudo docker --help` et `sudo docker container --help`, vous trouverez `start` et `restart` pour démarrer un container à l'arrêt ou redémarrer un container en cours d'exécution. Démarrez le container _Debian_ avec `sudo docker start <container debian>` puis exécutez-y un shell _bash_. Vérifiez le contenu du répertoire "/home". Le fichier est présent car le contenu persiste quand un container est arrêté ou redémarré.
-
-`
+Dans l'[éxercice 1][0], nous avons appris qu'un changement dans le container existe seulement dans le container. Exécutez un container _Debian_ en mode interactif avec un pseudo-terminal. Modifiez le contenu de "/home" comme vu précédemment puis sortez du container. Examinez les containers à l'arrêt. Parmi les différentes commandes listées par `sudo docker --help` et `sudo docker container --help`, vous trouverez `start` et `restart` pour démarrer un container à l'arrêt ou redémarrer un container en cours d'exécution. Démarrez le container _Debian_ avec `sudo docker start <container debian>` puis exécutez-y un shell _bash_. Vérifiez le contenu du répertoire "/home". Le fichier est présent car le contenu persiste quand un container est arrêté ou redémarré.
 
 ![stop - start][img0]
 
@@ -37,10 +35,11 @@ Créez un nouveau container à partir de votre image "mondebian:v1" et lancez le
 Sur le système hôte, modifiez votre fichier _Dockerfile_ avec la commande `nano Dockerfile` afin de pouvoir aussi utiliser les utilitaires _ps_, _[ifconfig][8]_ et _nano_. Vous pouvez utiliser une notation "1.x" si vous construisez des images de test. `sudo docker --help` indique que pour supprimer une image il faut utiliser la commande `rmi`. Nommez votre image finale "mondebian:v2".
 
 
-### Revenir à l'[exercice 2][1]                  
+### Revenir à l'[éxercice 2][1]                  Poursuivre avec l'[éxercice 4][2]     
 
 [0]: ./laboDocker.html
 [1]: ./laboDocker1.html
+[2]: ./laboDocker3.html
 [3]: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 [4]: https://docs.docker.com/engine/reference/builder/#from
 [5]: https://hub.docker.com/_/scratch

@@ -1,5 +1,5 @@
 # Laboratoire sur Docker
-Si vous n'avez jamais utilisé Docker, ce labo est pour vous. Il est fortement recommandé de faire les exercices dans l'ordre et de bien exécuter toutes les commandes, surtout celles se terminant avec `--help`. Plusieurs commandes expliquées dans les premiers exercices ne seront que mentionnées dans les suivants.
+Si vous n'avez jamais utilisé Docker, ce labo est pour vous. Il est fortement recommandé de faire les éxercices dans l'ordre et de bien exécuter toutes les commandes, surtout celles se terminant avec `--help`. Plusieurs commandes expliquées dans les premiers éxercices ne seront que mentionnées dans les suivants.
 
 Ce laboratoire vous permettra d'installer docker localement, d'interagir avec des images, de créer une image à partir d'un fichier Dockerfile, de tester l'isolation des processus et du système de fichiers, de monter un répertoire local dans un container et de valider l'authenticité des images.
 
@@ -9,7 +9,7 @@ Ce laboratoire vous permettra d'installer docker localement, d'interagir avec de
 Pour la partie _INSTALL DOCKER ENGINE_, seulement les instructions 1 et 3.
 Attention, si vous utilisez un autre système d'opération les instructions sont [différentes][1]
 
-## Exercice 1
+## Éxercice 1
 
 ### Premier pas
 Exécutez `sudo docker --help`
@@ -39,7 +39,7 @@ Exécutez `sudo docker container`. Pour lister les containers, nous devons utili
 
 Pour enlever un container individuellement, `sudo docker container rm --help`, mais nous enleverons plutôt tous les container arrêtés avec `sudo docker container prune`.
 
-### Poursuivre avec l'[exercice 2][2]
+### Poursuivre avec l'[éxercice 2][2]
 
 
 [0]: https://docs.docker.com/engine/install/ubuntu/

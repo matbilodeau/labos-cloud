@@ -26,7 +26,7 @@ En plus de pouvoir créer et démarrer des containers, Docker permet aussi de co
 
 L'image créée n'a pas de nom, il faudra donc toujours y référer par son _IMAGE ID_ ce qui n'est pas pratique. Pour "nommer:tagger" une image déja construite, la commande `sudo docker tag --help` est très informative. Renommez votre image avec le nom "mondebian" et le tag "v1". Le fichier _Dockerfile_ utilise "debian:stable" comme image de base et celle-ci à été téléchargée car celle utilisée précédemment était "debian:latest".
 
-![pas de nom][img2]
+![image de base][img2]
 
 Il est aussi possible de choisir le nom et le tag à la construction de l'image. `sudo docker build --help`. Pour donner un nom à l'image il faut utiliser l'option `-t name:tag`. Si on utilise seulement `-t name` le _TAG_ "latest" sera appliqué par défaut.
 
@@ -51,4 +51,4 @@ Sur le système hôte, modifiez votre fichier _Dockerfile_ avec la commande `nan
 [img0]: ./img/docker/docker3-0.png "persistance dans le meme container"
 [img1]: ./img/docker/docker3-1.png "image sans nom:tag"
 [img2]: ./img/docker/docker3-2.png "image de base téléchargée"
-[img2]: ./img/docker/docker3-3.png "test curl"
+[img3]: ./img/docker/docker3-3.png "test curl"

@@ -41,7 +41,7 @@ Exécutez un shell "sh" dans le container _Debian_ avec `sudo docker exec -ti <c
 ### Arrêter un container
 Un container s'arrête par défaut quand il n'y a plus de processus en cours d'exécution. Pour arrêter un container avec des processus toujours en cours d'exécution nous pouvons utiliser "Ctrl+c" à partir du terminal 1 ou, sur le terminal 2, `exit` pour sortir du container Debian puis `sudo docker stop <nom ou id container httpd>` ou encore `sudo docker kill <nom ou id container httpd>`. `stop` tente de faire un _graceful shutdown_, un arrêt "poli" tandis que `kill` impose l'arrêt. Enlevez tous les container arrêtés.
 
-### Revenir à l'[exercice 2][2]
+### Revenir à l'[exercice 1][1]                  Poursuivre avec l'[exercice 3][2]
 
 [0]: https://cloud.google.com/compute/docs/instances/connecting-to-instance#gcetools
 [1]: ./laboDocker.html

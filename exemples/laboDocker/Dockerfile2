@@ -1,0 +1,8 @@
+#Image de base
+FROM httpd:2.4
+
+#Ajout d'un fichier local
+COPY index.html /usr/local/apache2/htdocs
+
+#Ajout d'un fichier distant
+ADD https://raw.githubusercontent.com/matbilodeau/labos-cloud/main/exemples/laboDocker/distant.html /usr/local/apache2/htdocs

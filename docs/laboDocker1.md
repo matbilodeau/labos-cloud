@@ -14,7 +14,7 @@ _httpd_ est l'image officielle du serveur web Apache. Le container lancé attend
 
 Exécutez `sudo docker container --help`
 
-Pour obtenir de l'information détaillée sur un container, il faut utiliser `sudo docker container inspect <container name ou ID>`. Pour obtenir directement l'adresse IP `sudo docker container inspect <container name ou id> | grep IPAddress`. Maintenant un `curl <adresse container httpd>` devrait fonctionner. Sur le terminal 1, vous pouvez voir les logs du serveur web. Comme le terminal 2 est sur le système hôte, l'adresse IP dans les log est celle du gateway Docker. Les logs du container sont disponibles avec `sudo docker container logs <nom ou ID du container>` Toujours à partir du 2e terminal, `sudo docker run -ti debian:latest` puis `curl <ip du container httpd>`. L'outil _curl_ n'étant pas installé dû au système de fichier minimal, les `apt-get update` et `apt-get install curl -y` sont nécessaires. Sur le terminal 1, vous pouvez voir l'adresse ip du container Debian que nous venons d'utiliser. Sur le terminal 2, sortez avec `exit`.
+Pour obtenir de l'information détaillée sur un container, il faut utiliser `sudo docker container inspect <container name ou ID>`. Pour obtenir directement l'adresse IP `sudo docker container inspect <container name ou id> | grep IPAddress`. Maintenant un `curl <adresse container httpd>` devrait fonctionner. Sur le terminal 1, vous pouvez voir les logs du serveur web. Comme le terminal 2 est sur le système hôte, l'adresse IP dans les log est celle du gateway *Docker*. Les logs du container sont disponibles avec `sudo docker container logs <nom ou ID du container>` Toujours à partir du 2e terminal, `sudo docker run -ti debian:latest` puis `curl <ip du container httpd>`. L'outil _curl_ n'étant pas installé dû au système de fichier minimal, les `apt-get update` et `apt-get install curl -y` sont nécessaires. Sur le terminal 1, vous pouvez voir l'adresse ip du container Debian que nous venons d'utiliser. Sur le terminal 2, sortez avec `exit`.
 
 ![curl et logs][img0]
 
@@ -32,7 +32,7 @@ La commande `sudo docker exec` est exactement pour ça, lancer une commande dans
 ![ps -ef container][img3]
 
 ### Visibilité de processus entre les container
-`exit` pour sortir du container, `sudo docker ps` pour confirmer que le httpd est toujours en exécution. Bloquer un terminal pour chaque exécution de container n'est pas vraiment pratique, heureusement `sudo docker run --help` nous indique que l'option `-d` permet d'exécuter le container en arrière plan, donc vous laisser le contrôle du terminal 2. `sudo docker run -d debian` et vérifiez les containers en exécution. Si vous ne voyez pas de container _Debian_ c'est normal, aucun processus n'a été lancé. Corrigeons en utilisant le mode interactif + pseudo-terminal + arrière plan `-tid`. Examinez les processus avec `ps -ef` sur le système hôte. Vous devriez voir les processus du container _httpd_ et le shell _bash_ créé au lancement du container _Debian_ (run -ti) et le shell _sh_ (exec .. /bin/sh).
+`exit` pour sortir du container, `sudo docker ps` pour confirmer que le httpd est toujours en exécution. Bloquer un terminal pour chaque exécution de container n'est pas vraiment pratique, heureusement `sudo docker run --help` nous indique que l'option `-d` permet d'exécuter le container en arrière-plan, donc vous laisser le contrôle du terminal 2. `sudo docker run -d debian` et vérifiez les containers en exécution. Si vous ne voyez pas de container _Debian_ c'est normal, aucun processus n'a été lancé. Corrigeons en utilisant le mode interactif + pseudo-terminal + arrière plan `-tid`. Examinez les processus avec `ps -ef` sur le système hôte. Vous devriez voir les processus du container _httpd_ et le shell _bash_ créé au lancement du container _Debian_ (run -ti) et le shell _sh_ (exec .. /bin/sh).
 
 ![ps -ef plusieurs container][img4]
 
@@ -44,7 +44,7 @@ Un container s'arrête par défaut quand il n'y a plus de processus en cours d'e
 ### Revenir à l'[éxercice 1][1]                  Poursuivre avec l'[éxercice 3][2]
 
 [0]: https://cloud.google.com/compute/docs/instances/connecting-to-instance#gcetools
-[1]: ./laboDocker.html
+[1]: ./laboDocker0.html
 [2]: ./laboDocker2.html
 
 [img0]: ./img/docker/docker2-0.png "curl et logs"

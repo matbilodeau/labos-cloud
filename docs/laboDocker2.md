@@ -32,7 +32,7 @@ Créez un nouveau container à partir de votre image "mondebian:v1" et lancez le
 
 ![test curl][img3]
 
-Sur le système hôte, [modifiez][9] votre fichier _Dockerfile_ avec la commande `nano Dockerfile` afin de pouvoir aussi utiliser les utilitaires _ps_, _[ifconfig][8]_ et _nano_. Vous pouvez utiliser une notation "1.x" si vous construisez des images de test. `sudo docker --help` indique que pour supprimer une image il faut utiliser la commande `rmi`. Nommez votre image finale "mondebian:v2".
+Sur le système hôte, modifiez votre fichier _Dockerfile_, en respectant les [bonnes pratiques][9], avec la commande `nano Dockerfile` afin de pouvoir aussi utiliser les utilitaires _ps_, _[ifconfig][8]_ et _nano_. Vous pouvez utiliser une notation "1.x" si vous construisez des images de test. `sudo docker --help` indique que pour supprimer une image il faut utiliser la commande `rmi`. Nommez votre image finale "mondebian:v2".
 
 
 ### Revenir à l'[éxercice 2][1]                  Poursuivre avec l'[éxercice 4][2]     

@@ -73,5 +73,5 @@ Si votre système hôte peut être accessible publiquement par internet, assurez
 [img0]: ./img/docker/docker4-0.png "exécuter wget en construisant l'image"
 [img1]: ./img/docker/docker4-1.png "liste des fichiers montés"
 [img2]: ./img/docker/docker4-2.png "vue du système hôte"
-[img3]: ./img/docker/docker4-2.png "avec option -P"
-[img4]: ./img/docker/docker4-2.png "publier un port spécifique"
+[img3]: ./img/docker/docker4-3.png "avec option -P"
+[img4]: ./img/docker/docker4-4.png "publier un port spécifique"

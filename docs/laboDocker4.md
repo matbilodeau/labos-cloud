@@ -31,7 +31,7 @@ Cette manière de procéder est utile seulement lorsque l'application exécutée
 ### Revenir à l'[éxercice 4][1]                  Poursuivre avec l'éxercice 6                  
 
 [0]: ./laboDocker3.html
-[1]: ./laboDocker2.html
+[1]: ./laboDocker3.html
 [3]: https://docs.docker.com/engine/reference/builder/#cmd
 [4]: https://docs.docker.com/engine/reference/builder/#entrypoint
 [5]: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#cmd

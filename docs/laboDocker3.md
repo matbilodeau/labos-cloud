@@ -49,7 +49,7 @@ Si votre système hôte peut être accessible publiquement par internet, assurez
 
 ### Revenir à l'[éxercice 3][1]                  Poursuivre avec l'[éxercice 5][2]
 
-[0]: ./laboDocker3.html
+[0]: ./laboDocker2.html
 [1]: ./laboDocker2.html
 [2]: ./laboDocker4.html
 [3]: https://docs.docker.com/engine/reference/builder/#copy

@@ -47,10 +47,11 @@ Pour publier individuellement les ports, il faut utiliser l'option `-p port_cont
 
 Si votre système hôte peut être accessible publiquement par internet, assurez-vous que les règles de votre pare-feu sont bien configurées et votre container sera accessible sur le port publié.
 
-### Revenir à l'[éxercice 3][1]                  Poursuivre avec l'éxercice 5                  
+### Revenir à l'[éxercice 3][1]                  Poursuivre avec l'[éxercice 5][2]
 
 [0]: ./laboDocker3.html
 [1]: ./laboDocker2.html
+[2]: ./laboDocker4.html
 [3]: https://docs.docker.com/engine/reference/builder/#copy
 [4]: https://docs.docker.com/engine/reference/builder/#add
 [5]: https://fr.wikipedia.org/wiki/Permissions_UNIX

@@ -15,9 +15,9 @@ Les bonnes pratiques pour l'instruction [CMD][5] contiennent la commande nécess
 
 ![apache cmd][img0]
 
-Puisque notre container exécute seulement _apache2_, c'est presque comme s'il sagissait d'un exécutable indépendant qui sert un site web. Utilisez l'instruction _ENTRYPOINT_ pour votre container "monapache:v2" tout en respectant les [bonnes pratiques][6]
+Puisque notre container exécute seulement _apache2_, c'est presque comme s'il sagissait d'un exécutable indépendant qui sert un site web. Utilisez l'instruction _ENTRYPOINT_ pour votre nouvelle image "monapache:v2" tout en respectant les [bonnes pratiques][6]
 
-Pour trouver à quel endroit se trouvent les fichiers _html_ servis par _apache2_, utilisez la commande `cat /etc/apache2/sites-available/000-default.conf` qui fera afficher le _DocumentRoot_.
+Pour trouver à quel endroit se trouvent les fichiers _html_ servis par _apache2_, utilisez la commande `cat /etc/apache2/sites-available/000-default.conf` qui fera afficher le _DocumentRoot_. Montez le répertoire "public-html" au _DocumentRoot_ et testez votre container.
 
 ### Utilisateurs
 Par défaut, les processus s'exécutent en tant qu'utilisateur _root_ dans le container. Lorsqu'un processus peut fonctionner en mode non-privilégié, l'instruction _[USER][7]_ du fichier _Dockerfile_ permet de changer l'utilisateur qui exécutera les commandes _RUN_, _CMD_ et _ENTRYPOINT_ suivantes dans le fichier.

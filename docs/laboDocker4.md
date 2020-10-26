@@ -1,6 +1,6 @@
 # Laboratoire sur Docker
 
-## Éxercice 4
+## Éxercice 5
 Fichier _Dockerfile_ exécuter une commande, changer d'utilisateur dans le container.
 
 ### Exécuter une commande au lancement du container.

@@ -18,7 +18,7 @@ Pour qu'un certain contenu soit présent dans chaque nouveau container créé, i
 * [RUN][6]
   * Exécute une commande dans une nouvelle [couche][7].
 
-En plus de pouvoir créer et démarrer des containers, *Docker* permet aussi de construire nos images à partir d'un fichier Dockerfile. `sudo docker --help`. La commande dont nous avons besoin est donc `build`, exécutez `sudo docker build .` le "." référant au répertoire courrant.
+En plus de pouvoir créer et démarrer des containers, **Docker** permet aussi de construire nos images à partir d'un fichier Dockerfile. `sudo docker --help`. La commande dont nous avons besoin est donc `build`, exécutez `sudo docker build .` le "." référant au répertoire courrant.
 
 ![pas de nom][img1]
 

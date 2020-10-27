@@ -14,7 +14,7 @@ Lorsqu'on construit une image, **Docker** fourni un _IMAGE ID_ qui peut sembler 
 ### Authentifier l'image que nous téléchargeons d'un régistre
 Un [régistre][4] est une application permettant de stocker et distribuer des images **Docker** qui peut s'exécuter localement. **[Docker Hub][5]** est le service officiel de **Docker** pour héberger des _[repositories][6]_ contenant des images, publiques ou privées. Si vous avez un compte, vous pouvez utiliser la commande `sudo docker login` puis `sudo docker push` pour publier une image que vous avez construite; _login_ permet aussi de télécharger les images privées auxquelles vous avez accès. L'image envoyée vers **Docker Hub** est celle **que vous avez construite**, elle n'est pas reconstruite sur un système distant, ce qui signifie que les _sha-256_ des images intermédiaires et des couches correspondront. Les couches sont publiées de la plus haute à la plus basse et téléchargées de la plus basse à la plus haute. Un _sha-256_ est ajouté par le régistre pour valider l'opération de stockage distant. Si vous téléchargez l'image à partir d'un autre système, vous pouvez comparer les valeurs et valider que l'image téléchargée correspond à celle [publiée][8].
 
-![push pull][img1]
+<a href="https://labocloud.matbilodeau.dev/img/docker/docker6-0.png">![push pull][img1]</a> 
 
 ### Revenir à l'[éxercice 5][1]                 
 

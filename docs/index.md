@@ -8,6 +8,7 @@
   - [Éxercice 3][3]
   - [Éxercice 4][4]
   - [Éxercice 5][5]
+  - [Éxercice 6][6]
 
 
 
@@ -17,3 +18,4 @@
 [3]: ./laboDocker2.html
 [4]: ./laboDocker3.html
 [5]: ./laboDocker4.html
+[6]: ./laboDocker5.html

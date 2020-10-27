@@ -28,10 +28,11 @@ Pour les besoins de l'éxercice, nous allons sécuriser l'exécution de notre ve
 
 Cette manière de procéder est utile seulement lorsque l'application exécutée dans le container peut fonctionner correctement à partir d'un utilisateur non-privilégié. Pour les applications qui doivent s'exécuter dans le container en tant que _root_, il est recommandé soit de modifier l'application pour qu'elle fonctionne en mode non-privilégié ou d'utiliser le _[user namespace][8]_. Un mode expérimental, _[Rootless mode][9]_ est également disponible pour se prémunir contre les escalades de privilège.
 
-### Revenir à l'[éxercice 4][1]                  Poursuivre avec l'éxercice 6                  
+### Revenir à l'[éxercice 4][1]                  Poursuivre avec l'[éxercice 6][2]                  
 
 [0]: ./laboDocker3.html
 [1]: ./laboDocker3.html
+[1]: ./laboDocker5.html
 [3]: https://docs.docker.com/engine/reference/builder/#cmd
 [4]: https://docs.docker.com/engine/reference/builder/#entrypoint
 [5]: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#cmd

@@ -29,4 +29,4 @@ Un [régistre][4] est une application permettant de stocker et distribuer des im
 [8]: https://hub.docker.com/layers/matbilodeau/monhttpd/v4/images/sha256-7c4d9f3bd1329b477aeac492d2b7462f209f65bc94594a150d8dcf1a24a56f60
 
 [img0]: ./img/docker/docker6-0.png "comparaison des hash sha-256"
-[img0]: ./img/docker/docker6-1.png "inspection push et pull"
+[img1]: ./img/docker/docker6-1.png "inspection push et pull"

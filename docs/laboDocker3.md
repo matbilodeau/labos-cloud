@@ -1,10 +1,10 @@
 # Laboratoire sur Docker
 
-## Éxercice 4
+## Exercice 4
 Ajouter des fichiers à l'image, monter un répertoire local dans un container, réseau partie 2
 
 ### Ajouter des fichiers à une image
-Dans l'[éxercice 3][0], nous avons appris que le contenu persiste lorsqu'un container est arrêté. En utilisant un fichier _Dockerfile_ pour construire nos images, nous pouvons exécuter des commandes pour installer des utilitaires. Sur le système hôte, créez un répertoire "dockertest2" et entrez-y puis téléchargez le fichier _Dockerfile_ pour cet éxercice `wget https://raw.githubusercontent.com/matbilodeau/labos-cloud/main/exemples/laboDocker/Dockerfile2`. En vérifiant le contenu, vous remarquerez que deux commandes sont disponibles pour l'ajout de fichiers :
+Dans l'[exercice 3][0], nous avons appris que le contenu persiste lorsqu'un container est arrêté. En utilisant un fichier _Dockerfile_ pour construire nos images, nous pouvons exécuter des commandes pour installer des utilitaires. Sur le système hôte, créez un répertoire "dockertest2" et entrez-y puis téléchargez le fichier _Dockerfile_ pour cet exercice `wget https://raw.githubusercontent.com/matbilodeau/labos-cloud/main/exemples/laboDocker/Dockerfile2`. En vérifiant le contenu, vous remarquerez que deux commandes sont disponibles pour l'ajout de fichiers :
 
 * [COPY][3]
   * Ajoute des fichiers ou répertoires locaux dans le système de fichiers de l'image.
@@ -23,7 +23,7 @@ La [documentation][4] explique en partie pourquoi le fichier "distant.html" n'es
 Bien que fonctionnel, le fichier _Dockerfile_ ne respecte pas les [bonnes pratiques][8]. Des [instructions][9] sont disponibles pour l'utilisation de l'image de base _httpd_. Modifiez votre fichier _Dockerfile_ pour qu'il puisse, tout en respectant les bonnes pratiques, afficher correctement "distant.html" et nommez l'image finale "monhttpd:v3".
 
 ### Monter un répertoire local dans un container
-La manière [recommandée][10] pour persister de l'information entre les containers et le système hôte est le [volume][11]. Dans votre répertoire "dockertest2", créez un répertoire "public-html" puis copiez-y le fichier "index.html" téléchargé préalablement avec `mkdir public-html && cp index.html public-html/`. Modifiez le fichier avec un texte personnalisé. Créez une copie de ce fichier nommée "fichier2.html" et modifiez aussi le texte. Pour les besoins de cet éxercice, nous utiliserons un _[bind mount][12]_ pour la simplicité. L'option `-v chemin/sur/hôte/:chemin/dans/image/` peut être utilisée avec `run` ou `create`; pour des raisons de sécurité, **Docker** ne permet pas de monter un répertoire dans un container déjà créé. Créez un nouveau container à partir de votre image "monhttpd:v3" et montez "/home/<votre utilisateur>/dockertest2/public-html" vers "/usr/local/apache2/htdocs/", exécutez-le en arrière-plan puis lancez un shell _bash_ à l'intérieur. Inspectez le contenu du répertoire "htdocs" dans le container. Créez un nouveau fichier nommé "fichier3.html". Sortez du container et inspectez le contenu du répertoire "public-html" sur le système hôte.
+La manière [recommandée][10] pour persister de l'information entre les containers et le système hôte est le [volume][11]. Dans votre répertoire "dockertest2", créez un répertoire "public-html" puis copiez-y le fichier "index.html" téléchargé préalablement avec `mkdir public-html && cp index.html public-html/`. Modifiez le fichier avec un texte personnalisé. Créez une copie de ce fichier nommée "fichier2.html" et modifiez aussi le texte. Pour les besoins de cet exercice, nous utiliserons un _[bind mount][12]_ pour la simplicité. L'option `-v chemin/sur/hôte/:chemin/dans/image/` peut être utilisée avec `run` ou `create`; pour des raisons de sécurité, **Docker** ne permet pas de monter un répertoire dans un container déjà créé. Créez un nouveau container à partir de votre image "monhttpd:v3" et montez "/home/<votre utilisateur>/dockertest2/public-html" vers "/usr/local/apache2/htdocs/", exécutez-le en arrière-plan puis lancez un shell _bash_ à l'intérieur. Inspectez le contenu du répertoire "htdocs" dans le container. Créez un nouveau fichier nommé "fichier3.html". Sortez du container et inspectez le contenu du répertoire "public-html" sur le système hôte.
 
 ![repertoire monté][img1]
 Les fichiers montés appartiennent à l'utilisateur 1001, ce qui correspond à mon utilisateur sur le système hôte.
@@ -35,7 +35,7 @@ Le "fichier3.html" appartient à l'utilisateur _root_ sur mon système hôte; c'
 ### Réseau partie 2
 Nos interactions avec le réseau ont été minimales, lorsque nous avons testé la connection au serveur web nous sommes restés sur _localhost_. La colonne _PORTS_ affichée par `sudo docker images` indique le port 80/tcp, on dit que le port 80 est donc exposé. Ceci est possible avec l'instruction _[EXPOSE][13]_ du fichier _Dockerfile_. Les [bonnes pratiques][14] indique effectivement d'utiliser les ports traditionnels. L'instruction _EXPOSE_ ne fait qu'indiquer sur quel port le container s'attend à recevoir du trafic. Dans notre cas, le _Dockerfile_ de notre image de base _[httpd][15]_ indique bien _EXPOSE 80_ à la ligne 228.
 
-Dans l'[éxercie2][16], nous avons testé la communication entre deux containers sur un même réseau. Le _[default bridge network][17]_ a été utilisé pour tous nos containers jusqu'à maintenant. Sur ce réseau, les containers peuvent communiquer entre-eux à partir de leur adresse IP. Pour les besoins de l'éxercice ceci sera suffisant, mais devoir se fier à des adresses est peu pratique si on considère que les containers doivent être le plus [éphémères][18] possible. Les réseaux de type _[user-defined][19]_ ont plusieurs avantages comme la résolution automatique DNS et une meilleure isolation.
+Dans l'[éxercie2][16], nous avons testé la communication entre deux containers sur un même réseau. Le _[default bridge network][17]_ a été utilisé pour tous nos containers jusqu'à maintenant. Sur ce réseau, les containers peuvent communiquer entre-eux à partir de leur adresse IP. Pour les besoins de l'exercice ceci sera suffisant, mais devoir se fier à des adresses est peu pratique si on considère que les containers doivent être le plus [éphémères][18] possible. Les réseaux de type _[user-defined][19]_ ont plusieurs avantages comme la résolution automatique DNS et une meilleure isolation.
 
 Pour pouvoir lier le port exposé au système hôte, la [documentation][13] indique qu'il faut publier le port. De manière semblable au _bind mount_, publier un port doit se faire à la création du container. Avec l'option `-P`, tous les ports exposés seront publiés vers un port aléatoire du système hôte.
 
@@ -47,7 +47,7 @@ Pour publier individuellement les ports, il faut utiliser l'option `-p port_cont
 
 Si votre système hôte peut être accessible publiquement par internet, assurez-vous que les règles de votre pare-feu sont bien configurées et votre container sera accessible sur le port publié.
 
-### Revenir à l'[éxercice 3][1]                  Poursuivre avec l'[éxercice 5][2]
+### Revenir à l'[exercice 3][1]                  Poursuivre avec l'[exercice 5][2]
 
 [0]: ./laboDocker2.html
 [1]: ./laboDocker2.html

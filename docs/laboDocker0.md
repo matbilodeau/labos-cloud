@@ -1,4 +1,4 @@
-## Éxercice 1
+## Exercice 1
 
 ### Premier pas
 Exécutez `sudo docker --help`
@@ -28,7 +28,7 @@ Exécutez `sudo docker container`. Pour lister les containers, nous devons utili
 
 Pour enlever un container individuellement, `sudo docker container rm --help`, mais nous enleverons plutôt tous les container arrêtés avec `sudo docker container prune`.
 
-### Poursuivre avec l'[éxercice 2][2]
+### Poursuivre avec l'[exercice 2][2]
 
 
 [0]: https://docs.docker.com/engine/install/ubuntu/

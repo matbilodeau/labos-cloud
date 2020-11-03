@@ -3,13 +3,16 @@
 
 ### Containers - Docker
 - [Labo Docker][0]
-  - [Éxercice 1][1]
-  - [Éxercice 2][2]
-  - [Éxercice 3][3]
-  - [Éxercice 4][4]
-  - [Éxercice 5][5]
-  - [Éxercice 6][6]
+  - [Exercice 1][1]
+  - [Exercice 2][2]
+  - [Exercice 3][3]
+  - [Exercice 4][4]
+  - [Exercice 5][5]
+  - [Exercice 6][6]
 
+### Kubernetes
+  - [Labo Kubernetes][10]
+    - [Exercice 1][11]
 
 
 [0]: ./laboDocker.html
@@ -19,3 +22,6 @@
 [4]: ./laboDocker3.html
 [5]: ./laboDocker4.html
 [6]: ./laboDocker5.html
+
+[10]: ./laboKube.html
+[11]: ./laboKube0.html

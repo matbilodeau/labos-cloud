@@ -26,11 +26,11 @@ Kubernetes prend ses instructions sous forme de fichiers ".yaml".  Pour applique
 
 Prenez note qu'il peut y avoir un certain délai avant que la page web ne soit disponible. Le fichier index.html propose d'afficher le _hostname_ mais il s'agit ici de la partie _hostname_ de l'_url_. Le fichier "index2.html" affiche ce qui ressemble à un _CONTAINER ID_, celui du container intermédiaire lors de la construction de l'image.
 
-![container intermédiaire][img0]
+![container intermédiaire][img3]
 
 Si vous avez construit vous même votre image, enlevez le _#_ devant _echo_ dans le fichier "entrypoint.sh" puis reconstruisez l'image, par exemple avec un tag "v2". Modifiez le fichier "apache-deployment.yaml" pour utiliser "matbilodeau/test-apache-kube:v2" ou la vôtre. Rechargez le fichier "index2.html". Vous avez maintenant l'information du pod qui a répondu à la requête _http_.
 
-![pod][img1]
+![pod][img4]
 
 L'explication de la différence entre les deux affichages se trouve dans les instructions de [_RUN_][10] et [_ENTRYPOINT_][11], plus particulièrement le moment où ils s'exécutent.
 
@@ -56,5 +56,8 @@ Pour tout supprimer, utilisez directement `gcloud container clusters delete test
 [10]: ./laboDocker2.html
 [11]: ./laboDocker4.html
 
-[img0]: ./img/kube/kube1-0.png "image intermédiaire"
-[img1]: ./img/kube/kube1-1.png "pod"
+[img0]: ./img/kube/kube1-0.png "GCP GUI"
+[img1]: ./img/kube/kube1-1.png "erreur de connection"
+[img2]: ./img/kube/kube1-2.png "avertissement cluster"
+[img3]: ./img/kube/kube1-3.png "image intermédiaire"
+[img4]: ./img/kube/kube1-4.png "pod"

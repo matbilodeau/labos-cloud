@@ -39,4 +39,4 @@ Pour tout supprimer, utilisez directement `gcloud container clusters delete test
 [11]: ./laboDocker4.html
 
 [img0]: ./img/kube/kube1-0.png "image intermédiaire"
-[img1]: ./img/kube/kube1-0.png "pod"
+[img1]: ./img/kube/kube1-1.png "pod"

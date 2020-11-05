@@ -43,19 +43,18 @@ Pour tout supprimer, utilisez directement `gcloud container clusters delete test
 [3]: ./laboKube0.html
 
 
-[3]: https://console.cloud.google.com/kubernetes
-[4]: https://cloud.google.com/sdk/gcloud/reference/container/clusters/create
-[5]: https://kubernetes.io/fr/docs/concepts/overview/components/#composants-master
-[6]: https://cloud.google.com/sdk/gcloud/reference/container/clusters/get-credentials
-[7]: https://docs.docker.com/docker-hub/repos/
-
-[8]: https://kubernetes.io/fr/docs/concepts/workloads/pods/pod/
-[9]: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
-[10]: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
-[11]: https://kubernetes.io/docs/concepts/services-networking/ingress/
-[9]: https://kubernetes.io/fr/docs/concepts/architecture/nodes/
-[10]: ./laboDocker2.html
-[11]: ./laboDocker4.html
+[4]: https://console.cloud.google.com/kubernetes
+[5]: https://cloud.google.com/sdk/gcloud/reference/container/clusters/create
+[6]: https://kubernetes.io/fr/docs/concepts/overview/components/#composants-master
+[7]: https://cloud.google.com/sdk/gcloud/reference/container/clusters/get-credentials
+[8]: https://docs.docker.com/docker-hub/repos/
+[9]: https://kubernetes.io/fr/docs/concepts/workloads/pods/pod/
+[10]: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+[11]: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+[12]: https://kubernetes.io/docs/concepts/services-networking/ingress/
+[13]: https://kubernetes.io/fr/docs/concepts/architecture/nodes/
+[14]: ./laboDocker2.html
+[15]: ./laboDocker4.html
 
 [img0]: ./img/kube/kube1-0.png "GCP GUI"
 [img1]: ./img/kube/kube1-1.png "erreur de connection"

@@ -27,8 +27,8 @@ Pour mettre à l'échelle le cluster en ajoutant ou en retirant des noeuds, soit
 [5]: https://kubernetes.io/fr/docs/reference/kubectl/cheatsheet/#visualisation-et-recherche-de-ressources
 [6]: https://cloud.google.com/compute/docs/instances/connecting-to-instance
 [7]: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
-[8]:https://kubernetes.io/fr/docs/concepts/workloads/controllers/replicaset/
-[9]: ttps://kubernetes.io/fr/docs/reference/kubectl/cheatsheet/#mise-%C3%A0-l-%C3%A9chelle-de-ressources
+[8]: https://kubernetes.io/fr/docs/concepts/workloads/controllers/replicaset/
+[9]: https://kubernetes.io/fr/docs/reference/kubectl/cheatsheet/#mise-%C3%A0-l-%C3%A9chelle-de-ressources
 [10]: https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
 [11]: https://cloud.google.com/compute/docs/instances/connecting-advanced#windows-putty
 [12]: https://cloud.google.com/kubernetes-engine/docs/how-to/resizing-a-cluster

@@ -3,15 +3,15 @@
 ### Création d'un cluster
 Exécutez `gcloud config list` puis `kubectl version` pour vérifier que vous êtes connectés au bon projet et que les utilitaires sont bien [installés][0].
 
-Connectez vous à l'interface graphique de la console de **GCP** pour **[Kubernetes Engine][3]**, activez l'_API_ au besoin, et explorez les options s'offrant à vous, notamment pour la création de cluster et les valeurs par défaut. Pour ce laboratoire nous privilégierons l'utilitaire _gcloud sdk_. `gcloud container clusters --help` Pour [créer un cluster][4] **Kubernetes** utilisez la commande `gcloud container clusters create test-kubernetes`. Ce cluster sera créé avec les paramètres par défaut tels qu'affichés dans l'interface graphique.
+Connectez vous à l'interface graphique de la console de **GCP** pour **[Kubernetes Engine][4]**, activez l'_API_ au besoin, et explorez les options s'offrant à vous, notamment pour la création de cluster et les valeurs par défaut. Pour ce laboratoire nous privilégierons l'utilitaire _gcloud sdk_. `gcloud container clusters --help` Pour [créer un cluster][5] **Kubernetes** utilisez la commande `gcloud container clusters create test-kubernetes`. Ce cluster sera créé avec les paramètres par défaut tels qu'affichés dans l'interface graphique.
 
 ![GKE gui][img0]
 
- _Kubectl_ est un utilitaire permettant d'interagir avec le [plan de contrôle][5] Kubernetes via la composante _kube-apiserver_. Exécutez `kubectl --help`. Pour obtenir des informations sur le cluster créé exécutez `kubectl cluster-info`.
+ _Kubectl_ est un utilitaire permettant d'interagir avec le [plan de contrôle][6] Kubernetes via la composante _kube-apiserver_. Exécutez `kubectl --help`. Pour obtenir des informations sur le cluster créé exécutez `kubectl cluster-info`.
 
 ![kubectl error][img1]
 
-En effet, nous n'avons pas spécifié à quel cluster connecter _kubectl_. Il se peut toutefois que la commande ait fonctionné implicitement en utilisant une forme d'authentification basique. Référez-vous au message d'avertissement généré lors de la création du cluster. La [commande][6] en question permet également de changer le cluster auquel nous sommes connectés. `kubectl get nodes` affiche les [noeuds][9] du cluster.
+En effet, nous n'avons pas spécifié à quel cluster connecter _kubectl_. Il se peut toutefois que la commande ait fonctionné implicitement en utilisant une forme d'authentification basique. Référez-vous au message d'avertissement généré lors de la création du cluster. La [commande][7] en question permet également de changer le cluster auquel nous sommes connectés. `kubectl get nodes` affiche les [noeuds][13] du cluster.
 
 ![cluster warning][img2]
 
@@ -19,10 +19,10 @@ En effet, nous n'avons pas spécifié à quel cluster connecter _kubectl_. Il se
 Créez et entrez dans le répertoire "kubetest" puis clonez le repo **GitHub** suivant: "https://github.com/matbilodeau/test-apache-kube". La commande est `git clone https://github.com/matbilodeau/test-apache-kube`. Entrez dans ce répertoire et explorez le contenu.
 
 ### Pour créer votre propre image
-Construisez l'image à partir du fichier _Dockerfile_ fourni avec un nom:tag conforme pour la publication vers votre [repo][7] puis publiez-la. Modifiez le fichier "apache-deployment.yaml" en conséquence. Continuez avec les instructions ci-dessous.
+Construisez l'image à partir du fichier _Dockerfile_ fourni avec un nom:tag conforme pour la publication vers votre [repo][8] puis publiez-la. Modifiez le fichier "apache-deployment.yaml" en conséquence. Continuez avec les instructions ci-dessous.
 
 ### Pour utiliser une image publique
-Kubernetes prend ses instructions sous forme de fichiers ".yaml" appelés _manifests_. Pour appliquer les modifications selon les _manifests_ fournis ([pods][8], [deployment][9], [services][10], [ingress][11]), il faut utiliser `kubectl apply -f .` ce qui créera toutes les ressources décrites dans les manifests. `kubectl get --help` La commande sert à afficher des informations sur différents types de ressources; affichez les ressources crées avec `kubectl get pods`, `kubectl get services` et `kubectl get deployments`. L'utilitaire _watch_ permet de répéter une commande et d'afficher le résultat, ce qui peut être très pratique pour surveiller la création de vos ressources, par exemple avec `watch kubectl get ingress`.
+Kubernetes prend ses instructions sous forme de fichiers ".yaml" appelés _manifests_. Pour appliquer les modifications selon les _manifests_ fournis ([pods][9], [deployment][10], [services][11], [ingress][12]), il faut utiliser `kubectl apply -f .` ce qui créera toutes les ressources décrites dans les manifests. `kubectl get --help` La commande sert à afficher des informations sur différents types de ressources; affichez les ressources crées avec `kubectl get pods`, `kubectl get services` et `kubectl get deployments`. L'utilitaire _watch_ permet de répéter une commande et d'afficher le résultat, ce qui peut être très pratique pour surveiller la création de vos ressources, par exemple avec `watch kubectl get ingress`.
 
 Prenez note qu'il peut y avoir un certain délai avant que la page web ne soit disponible. Le fichier index.html propose d'afficher le _hostname_ mais il s'agit ici de la partie _hostname_ de l'_url_. Le fichier "index2.html" affiche ce qui ressemble à un _CONTAINER ID_, celui du container intermédiaire lors de la construction de l'image.
 
@@ -32,7 +32,7 @@ Si vous avez construit vous même votre image, enlevez le _#_ devant _echo_ dans
 
 ![pod][img4]
 
-L'explication de la différence entre les deux affichages se trouve dans les instructions de [_RUN_][10] et [_ENTRYPOINT_][11], plus particulièrement le moment où ils s'exécutent.
+L'explication de la différence entre les deux affichages se trouve dans les instructions de [_RUN_][14] et [_ENTRYPOINT_][15], plus particulièrement le moment où ils s'exécutent.
 
 Pour tout supprimer, utilisez directement `gcloud container clusters delete test-kubernetes`. Le même déploiement est utilisé pour l'exercice 2.
 

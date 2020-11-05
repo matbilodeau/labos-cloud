@@ -14,7 +14,7 @@ Pour créer le _HPA_, utilisez `kubectl autoscale deployment apache-deployment -
 
 ![autoscaling deployment][img2]
 
-Pour mettre à l'échelle le cluster en ajoutant ou en retirant des noeuds, soit en créeant ou supprimant des machines virtuelles qui sont des ressources du [fournisseur cloud][12] et non de **Kubernetes**, on exécute `gcloud container clusters resize test-kubernetes --num-nodes 5`pour avoir 5 noeuds. Il est aussi possible de configurer l'[autoscaling de cluster][13] selon vos besoins. Vous pouvez supprimer votre cluster quand vous aurez terminé.
+Pour mettre à l'échelle le cluster en ajoutant ou en retirant des noeuds, soit en créeant ou supprimant des machines virtuelles qui sont des ressources du [fournisseur cloud][12] et non de **Kubernetes**, on exécute `gcloud container clusters resize test-kubernetes --num-nodes 5` pour avoir 5 noeuds. Il est aussi possible de configurer l'[autoscaling de cluster][13] selon vos besoins. Vous pouvez supprimer votre cluster quand vous aurez terminé.
 
 
 ### Revenir à l'[exercice 1][1]                  Poursuivre avec l'exercice 3 (à venir)

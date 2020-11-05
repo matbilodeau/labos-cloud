@@ -34,12 +34,13 @@ Si vous avez construit vous même votre image, enlevez le _#_ devant _echo_ dans
 
 L'explication de la différence entre les deux affichages se trouve dans les instructions de [_RUN_][10] et [_ENTRYPOINT_][11], plus particulièrement le moment où ils s'exécutent.
 
-Pour tout supprimer, utilisez directement `gcloud container clusters delete test-kubernetes`. Le même déploiement est utilisé pour l'exercice 2
+Pour tout supprimer, utilisez directement `gcloud container clusters delete test-kubernetes`. Le même déploiement est utilisé pour l'exercice 2.
 
-### Poursuivre avec l'exercice 2 (à venir)
+### Poursuivre avec l'[exercice 2][3]
 
 
 [0]: ./laboKube.html
+[3]: ./laboKube0.html
 
 
 [3]: https://console.cloud.google.com/kubernetes

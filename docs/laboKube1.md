@@ -35,5 +35,5 @@ Pour mettre à l'échelle le cluster en ajoutant ou en retirant des noeuds, soit
 [13]: https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler
 
 [img0]: ./img/kube/kube2-0.png "noeud pod container"
-[img0]: ./img/kube/kube2-1.png "deployment ressources"
-[img0]: ./img/kube/kube2-2.png "autoscaling deployment"
+[img1]: ./img/kube/kube2-1.png "deployment ressources"
+[img2]: ./img/kube/kube2-2.png "autoscaling deployment"

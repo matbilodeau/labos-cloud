@@ -20,7 +20,7 @@ Pour mettre à l'échelle le cluster en ajoutant ou en retirant des noeuds, soit
 ### Revenir à l'[exercice 1][1]                  Poursuivre avec l'exercice 3 (à venir)
 
 
-[1]: ./laboKube0._html
+[1]: ./laboKube0.html
 
 [3]: https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture
 [4]: https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture#control_plane

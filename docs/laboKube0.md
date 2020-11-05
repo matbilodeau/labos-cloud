@@ -40,7 +40,7 @@ Pour tout supprimer, utilisez directement `gcloud container clusters delete test
 
 
 [0]: ./laboKube.html
-[3]: ./laboKube0.html
+[3]: ./laboKube1.html
 
 
 [4]: https://console.cloud.google.com/kubernetes

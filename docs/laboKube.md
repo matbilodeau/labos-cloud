@@ -1,7 +1,7 @@
 # Laboratoire sur Kubernetes
 Ce laboratoire vise à vous familiariser avec l'utilisation de **Kubernetes**. Il est fortement recommandé de faire les exercices dans l'ordre et de bien exécuter toutes les commandes, surtout celles se terminant avec `--help`. Plusieurs commandes expliquées dans les premiers exercices ne seront que mentionnées dans les suivants. Utilisez les liens pour accéder à de la documentation sur les diverses commandes ou outils présentés.
 
-Ce laboratoire vous permettra d'installer les outils et d'interagir avec **Kubernetes**, de créer et modifier des ressources.
+Ce laboratoire vous permettra d'installer les outils et d'interagir avec **Kubernetes**, de créer et modifier de l'infrastructure et des ressources, de comprendre les fichiers _manifests_ pour les déploiements et les services **Kubernetes**.
 
 ## Pré-requis
 Avant de commencer, assurez-vous d'avoir une connaissance de base de **Docker**, par exemple en complétant les exercices disponibles [ici][0]. Une connaissance de base de Linux est un atout.

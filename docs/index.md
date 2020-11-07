@@ -10,7 +10,7 @@
   - [Exercice 5][5]
   - [Exercice 6][6]
 
-### Kubernetes
+### Microservices - Kubernetes
   - [Labo Kubernetes][10]
     - [Exercice 1][11]
     - [Exercice 2][12]

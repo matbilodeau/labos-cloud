@@ -21,8 +21,22 @@ metadata:
     app: frontend
 spec:
   selector:
-    app: frontend
+    app: frontend-prod
   ports:
-  - port: 80
-    targetPort: 3000
-    name: http
+  - port: 3000
+    name: myapp
+---
+
+
+# apiVersion: v1
+#kind: Service
+#metadata:
+#  name:
+#spec:
+#  selector:
+#    app:
+#  ports:
+#    - protocol:
+#      port:
+#      targetPort:
+#  type: LoadBalancer

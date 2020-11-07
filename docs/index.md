@@ -14,6 +14,7 @@
   - [Labo Kubernetes][10]
     - [Exercice 1][11]
     - [Exercice 2][12]
+    - [Exercice 3][13]
 
 
 [0]: ./laboDocker.html
@@ -27,3 +28,4 @@
 [10]: ./laboKube.html
 [11]: ./laboKube0.html
 [12]: ./laboKube1.html
+[13]: ./laboKube2.html

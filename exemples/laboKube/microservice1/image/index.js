@@ -25,29 +25,21 @@ const request = require('request-promise-native')
 
 app.get('/', async(req, res) => {
 
-	const begin = Date.now()
+        const begin = Date.now()
 
-	let up
-	try {
-		up = await request({
-			url: upstream_uri,
-			headers: headers
-		})
-	} catch (error) {
-		up = error
-	}
-	const timeSpent = (Date.now() - begin) / 1000 + "secs"
+        let up
+        try {
+                up = await request({
+                        url: upstream_uri,
+                })
+        } catch (error) {
+                up = error
+        }
+        const timeSpent = (Date.now() - begin) / 1000 + "secs"
 
-	res.end(`${service_name} - ${timeSpent}\n${upstream_uri} -> ${up}`)
+        res.end(`${service_name} - ${timeSpent}\n${upstream_uri} -> ${up}`)
 })
 
 app.listen(port, () => {
-	console.log(`${service_name} listening on port ${port}!`)
+        console.log(`${service_name} listening on port ${port}!`)
 })
-
-
-
-
-
-
-}

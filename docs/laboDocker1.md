@@ -46,8 +46,8 @@ Un container s'arrête par défaut quand il n'y a plus de processus en cours d'e
 [0]: https://cloud.google.com/compute/docs/instances/connecting-to-instance#gcetools
 [1]: ./laboDocker0.html
 [2]: ./laboDocker2.html
-[3]: https://packages.debian.org/stretch/procps
-[4]: https://packages.debian.org/stretch/psmisc
+[3]: https://packages.debian.org/stretch/psmisc
+[4]: https://packages.debian.org/stretch/procps
 
 [img0]: ./img/docker/docker2-0.png "curl et logs"
 [img1]: ./img/docker/docker2-1.png "ps -ef"

@@ -4,7 +4,7 @@
 Fichier _Dockerfile_ exécuter une commande, changer d'utilisateur dans le container.
 
 ### Exécuter une commande au lancement du container.
-Dans l'[exercice 4][0], nous avons appris comment monter un répertoire dans un container et comment publier un port pour accéder à un service qui s'exécute dans un container. Créez un répertoire "dockertest3" sur le système hôte puis créez-y un fichier _Dockerfile_ avec les instructions suivantes: à partir d'une image de base "ubuntu:18.04" installez _curl_ _procps_ _nano_ et _apache2_ et exposez le port 80.
+Dans l'[exercice 4][0], nous avons appris comment monter un répertoire dans un container et comment publier un port pour accéder à un service qui s'exécute dans un container. Créez un répertoire "dockertest3" sur le système hôte, puis créez-y un fichier _Dockerfile_ avec les instructions suivantes: à partir d'une image de base "ubuntu:18.04" installez _curl_ _procps_ _nano_ et _apache2_ et exposez le port 80.
 
 * [CMD][3]
   * Indique quelle commande exécuter par défaut au lancement du container.
@@ -15,7 +15,7 @@ Les bonnes pratiques pour l'instruction [CMD][5] contiennent la commande nécess
 
 ![apache cmd][img0]
 
-Puisque notre container exécute seulement _apache2_, c'est presque comme s'il sagissait d'un exécutable indépendant qui sert un site web. Utilisez l'instruction _ENTRYPOINT_ pour votre nouvelle image "monapache:v2" tout en respectant les [bonnes pratiques][6]
+Puisque notre container exécute seulement _apache2_, c'est presque comme s'il s'agissait d'un exécutable indépendant qui sert un site web. Utilisez l'instruction _ENTRYPOINT_ pour votre nouvelle image "monapache:v2" tout en respectant les [bonnes pratiques][6]
 
 Pour trouver à quel endroit se trouvent les fichiers _html_ servis par _apache2_, utilisez la commande `cat /etc/apache2/sites-available/000-default.conf` qui fera afficher le _DocumentRoot_. Montez le répertoire "public-html" au _DocumentRoot_ et testez votre container.
 

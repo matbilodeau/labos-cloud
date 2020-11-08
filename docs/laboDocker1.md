@@ -19,7 +19,7 @@ Pour obtenir de l'information détaillée sur un container, il faut utiliser `su
 ![curl et logs][img0]
 
 ### Visibilité des processus entre le système hôte et les containers
-Sur le terminal 2, `ps -ef` pour avoir une liste des processus en exécution sur le système hôte. La première colonne est le nom d'utilisateur ayant démarré le processus, la 2e colonne le numéro du processus (_PID_), la 3e le numéro du processus parent(_PPID_), et la dernière la commande exécutée. Vous devriez voir 4 processus httpd. En remontant la hiérarchie des processus parents, vous arriverez à votre utilisateur dans son shell (bash) qui a lancé la commande `sudo docker run...` et au runtime containerd qui exécute le container lui-même. Vous pouvez utiliser la commande `pstree <PID>` avec le _PID_ de votre terminal et du containerd. Le système hôte peut voir les processus à l'intérieur des containers. Pour installer l'outil pstree, les apt-get update et apt-get install psmisc sont nécessaires.
+Sur le terminal 2, `ps -ef` pour avoir une liste des processus en exécution sur le système hôte. La première colonne est le nom d'utilisateur ayant démarré le processus, la 2e colonne le numéro du processus (_PID_), la 3e le numéro du processus parent(_PPID_), et la dernière la commande exécutée. Vous devriez voir 4 processus httpd. En remontant la hiérarchie des processus parents, vous arriverez à votre utilisateur dans son shell (bash) qui a lancé la commande `sudo docker run...` et au runtime containerd qui exécute le container lui-même. Vous pouvez utiliser la commande `pstree <PID>` avec le _PID_ de votre terminal et du containerd. Le système hôte peut voir les processus à l'intérieur des containers. Si l'outil pstree n'est pas installé sur le système hôte, vous pouvez exécuter `apt-get install` avec le _package_ _[psmisc][3]_ ou _[procps][4]_, ce dernier contenant plus d'utilitaires pour examiner les processus.
 
 ![ps -ef][img1]
 ![pstree][img2]
@@ -46,6 +46,8 @@ Un container s'arrête par défaut quand il n'y a plus de processus en cours d'e
 [0]: https://cloud.google.com/compute/docs/instances/connecting-to-instance#gcetools
 [1]: ./laboDocker0.html
 [2]: ./laboDocker2.html
+[3]: https://packages.debian.org/stretch/procps
+[4]: https://packages.debian.org/stretch/psmisc
 
 [img0]: ./img/docker/docker2-0.png "curl et logs"
 [img1]: ./img/docker/docker2-1.png "ps -ef"

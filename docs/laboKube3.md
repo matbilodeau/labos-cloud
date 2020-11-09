@@ -41,7 +41,7 @@ Vous pouvez supprimer votre cluster quand vous aurez terminé. Le même déploie
 [4]: https://istio.io/latest/docs/concepts/what-is-istio/
 [5]: https://github.com/istio/community
 [6]: https://kubernetes.io/fr/docs/concepts/workloads/pods/pod-overview/#comprendre-les-pods
-[7]: ./laboKube1.html
+[7]: ./laboKube0.html
 [8]: https://istio.io/latest/docs/setup/additional-setup/config-profiles/
 [9]: https://istio.io/latest/docs/examples/bookinfo/
 [10]: https://github.com/istio/istio/

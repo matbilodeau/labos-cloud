@@ -48,6 +48,6 @@ Vous pouvez supprimer votre cluster quand vous aurez terminé. Le même déploie
 [11]: http://imagescanner.cloud.ibm.com/
 [12]: https://istio.io/latest/docs/concepts/traffic-management/#gateways
 
-[img0]: ./img/kube/kube3-0.png "microservices"
-[img1]: ./img/kube/kube3-1.png "services istio"
-[img2]: ./img/kube/kube3-2.png "Ingress Gateway"
+[img0]: ./img/kube/kube4-0.png "microservices"
+[img1]: ./img/kube/kube4-1.png "services istio"
+[img2]: ./img/kube/kube4-2.png "Ingress Gateway"

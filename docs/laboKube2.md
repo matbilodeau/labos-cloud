@@ -17,7 +17,7 @@ Pour communiquer avec le cluster, nous avons besoin d'une porte d'entrée. Les e
 Vous pouvez supprimer votre cluster quand vous aurez terminé.
 
 
-### Revenir à l'[exercice 2][1]                  Poursuivre avec l'[exercice 4][2] (à venir)
+### Revenir à l'[exercice 2][1]                  Poursuivre avec l'[exercice 4][2]
 
 [0]: ./laboKube0.html
 [1]: ./laboKube1.html

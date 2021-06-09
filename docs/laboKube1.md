@@ -1,7 +1,7 @@
 ## Exercice 2
 
 ### Interagir avec le cluster
-Après la création du cluster [pour l'exercice 1][1] et lors de l'exécution de la commande pour obtenir les informations du [cluster][3], on obtient l'adresse ip du [_Master_][4]. Le cluster est aussi composé de 3 _nodes_. `gcloud container clusters describe` permet d'afficher de l'information détaillée sur le cluster; on voit l'adresse IP du _Master_, le _initialNodeCount_ mais il ne semble pas y avoir d'information sur les noeuds individuels. L'[aide-mémoire][5] de _kubectl_ indique comment visualiser et rechercher des ressources. `kubectl get pods -o wide` affiche plus de détails sur les _pods_, notamment sur quel noeud s'exécute chaque _pod_. Puisque les noeuds sont des machines virtuelles sur **Google Compute Engine**, il est possible de s'y [connecter][6]. Connectez-vous à un noeud exécutant un pod et inspectez les containers en cours d'exécution. Modifiez les valeurs pour le nom du déploiement et du pod dans le _manifest_ du déploiement pour "apache-deployment". Dans le _manifest_ du service changez le nom pour "apache-service", appliquez les modifications à votre cluster et inspectez de nouveau. Changer le nom d'un déploiement ne supprime pas l'ancien mais crée un nouveau déploiement distinct, ce qui explique pourquoi nous avons maintenant 4 _pods_.
+Après la création du cluster [pour l'exercice 1][1] et lors de l'exécution de la commande pour obtenir les informations du [cluster][3], on obtient l'adresse ip du [_Master_][4]. Le cluster est aussi composé de 3 _nodes_. `gcloud container clusters describe` permet d'afficher de l'information détaillée sur le cluster; on voit l'adresse IP du _Master_, le _initialNodeCount_ mais il ne semble pas y avoir d'information sur les noeuds individuels. L'[aide-mémoire][5] de _kubectl_ indique comment visualiser et rechercher des ressources. `kubectl get pods -o wide` affiche plus de détails sur les _pods_, notamment sur quel noeud s'exécute chaque _pod_. Puisque les noeuds sont des [machines virtuelles][14] sur **Google Compute Engine**, il est possible de s'y [connecter][6]. Connectez-vous à un noeud exécutant un pod et inspectez les containers en cours d'exécution. Modifiez les valeurs pour le nom du déploiement et du pod dans le _manifest_ du déploiement pour "apache-deployment". Dans le _manifest_ du service changez le nom pour "apache-service", appliquez les modifications à votre cluster et inspectez de nouveau. Changer le nom d'un déploiement ne supprime pas l'ancien mais crée un nouveau déploiement distinct, ce qui explique pourquoi nous avons maintenant 4 _pods_.
 
 ![noeud pod container][img0]
 
@@ -34,6 +34,7 @@ Pour mettre à l'échelle le cluster en ajoutant ou en retirant des noeuds, soit
 [11]: https://cloud.google.com/compute/docs/instances/connecting-advanced#windows-putty
 [12]: https://cloud.google.com/kubernetes-engine/docs/how-to/resizing-a-cluster
 [13]: https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler
+[14]: https://cloud.google.com/kubernetes-engine/docs/concepts/node-images
 
 [img0]: ./img/kube/kube2-0.png "noeud pod container"
 [img1]: ./img/kube/kube2-1.png "deployment ressources"

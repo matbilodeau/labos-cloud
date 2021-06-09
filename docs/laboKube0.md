@@ -3,7 +3,7 @@
 ### Création d'un cluster
 Exécutez `gcloud config list` puis `kubectl version` pour vérifier que vous êtes connectés au bon projet et que les utilitaires sont bien [installés][0].
 
-Connectez vous à l'interface graphique de la console de **GCP** pour **[Kubernetes Engine][4]**, activez l'_API_ au besoin, et explorez les options s'offrant à vous, notamment pour la création de cluster et les valeurs par défaut. Pour ce laboratoire nous privilégierons l'utilitaire _gcloud sdk_. `gcloud container clusters --help` Pour [créer un cluster][5] **Kubernetes** utilisez la commande `gcloud container clusters create test-kubernetes`. Ce cluster sera créé avec les paramètres par défaut tels qu'affichés dans l'interface graphique.
+Connectez vous à l'interface graphique de la console de **GCP** pour **[Kubernetes Engine][4]**, activez l'_API_ au besoin, et explorez les options s'offrant à vous, notamment pour la création de cluster et les valeurs par défaut. Pour ce laboratoire nous privilégierons l'utilitaire _gcloud sdk_. `gcloud container clusters --help` Pour [créer un cluster][5] **Kubernetes** utilisez la commande `gcloud container clusters create test-kubernetes --image-type=cos`. Ce cluster sera créé avec les paramètres par défaut tels qu'affichés dans l'interface graphique.
 
 ![GKE gui][img0]
 

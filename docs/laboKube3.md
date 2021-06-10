@@ -36,10 +36,11 @@ Vous avez remarqué que l'affichage diffère occasionnelement; les pods éligibl
 Vous pouvez supprimer votre cluster quand vous aurez terminé. Le même déploiement sera utilisé pour le prochain exercice.
 
 
-### Revenir à l'[exercice 3][1]                  Poursuivre avec l'exercice 5 (à venir)
+### Revenir à l'[exercice 3][1]                  Poursuivre avec l'[exercice 5][2]
 
 [0]: ./laboKube.html
 [1]: ./laboKube2.html
+[2]: ./laboKube4.html
 
 [3]: https://en.wikipedia.org/wiki/Service_mesh
 [4]: https://istio.io/latest/docs/concepts/what-is-istio/
